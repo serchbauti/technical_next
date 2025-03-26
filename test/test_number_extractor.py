@@ -1,3 +1,4 @@
+"""Test"""
 import pytest
 from app.services.number_extractor import NumberExtractor
 
