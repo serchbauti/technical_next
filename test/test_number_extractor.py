@@ -14,13 +14,28 @@ def test_extract_invalid_number():
         extractor.extract(150)
 
 
-def test_get_extracted_number():
+def test_calculate_number_extracted_within_range():
     extractor = NumberExtractor()
-    extractor.extract(25)
-    assert extractor.get_extracted() == 25
+    assert extractor.calculate_number_extracted(50) == 50
 
 
-def test_get_extracted_without_extraction():
+def test_calculate_number_extracted_minimum():
+    extractor = NumberExtractor()
+    assert extractor.calculate_number_extracted(1) == 1
+
+
+def test_calculate_number_extracted_maximum():
+    extractor = NumberExtractor()
+    assert extractor.calculate_number_extracted(100) == 100
+
+
+def test_calculate_number_extracted_out_of_range():
     extractor = NumberExtractor()
     with pytest.raises(ValueError):
-        extractor.get_extracted()
+        extractor.calculate_number_extracted(101)
+
+
+def test_calculate_number_extracted_negative():
+    extractor = NumberExtractor()
+    with pytest.raises(ValueError):
+        extractor.calculate_number_extracted(-1)

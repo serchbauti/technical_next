@@ -7,7 +7,7 @@ class NumberExtractor:
     Methods:
         extract(number: int): Extracts a number from the set if it
         is within the allowed range.
-        get_extracted(): Returns the last extracted number,
+        calculate_number_extracted(): Calculate extracted number,
         raising an error if no number has been extracted.
     """
     def __init__(self):
@@ -26,16 +26,18 @@ class NumberExtractor:
         """
         if number not in self.numbers:
             raise ValueError("Number outside the allowed range (1-100).")
-        self.extracted = number
+        self.extracted = self.calculate_number_extracted(number)
         return number
 
-    def get_extracted(self):
-        """Retrieves the last extracted number.
-        Raises:
-            ValueError: If no number has been extracted yet.
+    def calculate_number_extracted(self, number: int):
+        """Calculates the extracted number based on the given number.
+        Args:
+            number (int): The number to be extracted.
         Returns:
-            int: The last extracted number.
+            int: The extracted number.
         """
-        if self.extracted is None:
-            raise ValueError("No number has been drawn yet.")
-        return self.extracted
+        if number is None or number not in self.numbers:
+            raise ValueError("Invalid number")
+        sum_total = int(sum(self.numbers) / 2)
+        sum_actual = sum_total - number
+        return sum_total - sum_actual
