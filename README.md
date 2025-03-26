@@ -34,7 +34,7 @@ Para ejecutar el proyecto, utiliza el siguiente comando:
 uvicorn app.main:app --reload
 ```
 
-Accede a la aplicación en tu navegador en `http://localhost:8000` para interactuar con la interfaz de usuario o utiliza herramientas como Postman para probar los endpoints de la API.
+Accede a la aplicación en tu navegador en `http://localhost:8000` para interactuar con la interfaz de usuario o utiliza herramientas como Postman para probar los endpoints de la API los cuales puedes explorar en la ruta `http://localhost:8000/docs`.
 
 ## Licencia
 Este proyecto está bajo la Licencia MIT. Para más detalles, consulta el archivo LICENSE.
