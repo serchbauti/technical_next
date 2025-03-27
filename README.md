@@ -1,9 +1,9 @@
-# Proyecto de Extracción de Números
+# Technical Test extract number
 
 ## Descripción
-Este proyecto es una API desarrollada con FastAPI que permite extraer números dentro de un rango específico (1-100). El proyecto cuenta con una parte grafica y tambien cuenta con una api con la cual puedes interactuar.
+Este proyecto es una API desarrollada con FastAPI que permite extraer números dentro de un rango específico (1-100). El proyecto cuenta con una parte grafica y tambien cuenta con una api con la cual puedes interactuar, cabe mencionar que de igual manera el proyecto se encuentra desplegado en RENDER puede consultar la siguiente url para poder interactuar https://technical-next.onrender.com online.
 
-## Instalación
+## 🚀 Instalación
 Sigue estos pasos para instalar y ejecutar el proyecto en tu entorno local:
 
 ```bash
